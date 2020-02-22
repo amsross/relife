@@ -1,4 +1,4 @@
-type t = list(Life.Graph.coords);
+type t = list(Life.Coords.t);
 
 let random = () => {
   Random.self_init();
