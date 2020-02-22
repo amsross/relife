@@ -6,7 +6,7 @@ let (<.) = (f, g, a) => f(g(a));
 
 let pattern =
   try(Sys.argv[2]) {
-  | Invalid_argument(_) => ""
+  | Invalid_argument(_) => Js.Exn.raiseError("No Pattern Provided")
   };
 
 let g = Life.Graph.make(rows - 2, columns, Patterns.get(pattern));
