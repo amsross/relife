@@ -5,13 +5,20 @@ module rec Cell: {
   type t =
     | Live
     | Dead;
+
+  /** the default state of a cell */
   let empty: t;
+  /** is the current cell alive */
   let is_alive: t => bool;
+  /** convert the current cell to a string for display */
   let show: t => string;
 
+  /** get a list of all the current cell's neighbors */
   let get_neighbors: (Graph.t, Graph.coords) => list(t);
+  /** get a count of all the current cell's living neighbors */
   let count_neighbors: (Graph.t, Graph.coords) => int;
 
+  /** get the representation of the current cell in the next graph */
   let next: (Graph.t, Graph.coords, t) => t;
 } = {
   type t =
@@ -64,10 +71,16 @@ and Graph: {
   type t = array(array(Cell.t));
   type coords = (int, int);
 
+  /** create a graph of cells of the given dimensions
+      - provided coordinants create live cells */
   let make: (int, int, list(coords)) => t;
+
+  /** convert the current cell to a string for display */
   let show: t => unit;
+  /** get the cell at the given coordinants from the graph */
   let get: (t, coords) => Cell.t;
 
+  /** get the representation of the next graph */
   let next: t => t;
 } = {
   type t = array(array(Cell.t));
