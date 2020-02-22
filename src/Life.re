@@ -76,7 +76,7 @@ and Graph: {
   let make: (int, int, list(coords)) => t;
 
   /** convert the current cell to a string for display */
-  let show: t => unit;
+  let show: t => string;
   /** get the cell at the given coordinants from the graph */
   let get: (t, coords) => Cell.t;
 
@@ -105,7 +105,10 @@ and Graph: {
     };
 
   let show =
-    Array.iter(Js.log <. Array.fold_left(a => (++)(a) <. Cell.show, ""));
+    Array.fold_left(
+      a => (++)(a) <. Array.fold_left(a => (++)(a) <. Cell.show, ""),
+      "",
+    );
 
   let next = g => Array.(mapi(x => mapi(y => Cell.next(g, (x, y))), g));
 };
