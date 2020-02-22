@@ -1,5 +1,19 @@
 type t = list(Life.Graph.coords);
 
+let random = () => {
+  Random.self_init();
+
+  let coords = ref([]);
+
+  for (_ in 0 to 50) {
+    if (Random.int(2) == 1) {
+      coords := [(Random.int(10), Random.int(10)), ...coords^];
+    };
+  };
+
+  coords^;
+};
+
 let get =
   fun
   | "acorn" => [(0, 1), (1, 3), (2, 0), (2, 1), (2, 4), (2, 5), (2, 6)]
@@ -52,4 +66,4 @@ let get =
       (3, 7),
       (3, 8),
     ]
-  | _ => [];
+  | _ => random();

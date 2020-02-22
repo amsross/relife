@@ -20,7 +20,7 @@ let rec main = (i, current) => {
   ++ " GENERATION "
   ++ string_of_int(i + 1);
 
-  current != next ? setTimeout(_ => main(i + 1, next), 500, g) : ();
+  current != next ? setTimeout(main(i + 1), 100, next) : ();
 };
 
 main(0, g);

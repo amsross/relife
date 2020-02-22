@@ -17,3 +17,4 @@ node lib/js/src/Demo.bs.js <pattern>  # run the code
   * `growth`
   * `r_pentomino`
   * `rabbits`
+  * `random`
