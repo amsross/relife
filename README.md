@@ -26,4 +26,4 @@ node lib/js/src/Demo.bs.js <pattern>  # run the code
   * `schick_engine`
   * `random`
 
-Find more at (Life Lexicon)[https://web.archive.org/web/20081221055952/http://www.argentum.freeserve.co.uk/lex.htm].
+Find more at [Life Lexicon](https://web.archive.org/web/20081221055952/http://www.argentum.freeserve.co.uk/lex.htm).
