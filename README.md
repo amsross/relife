@@ -14,6 +14,7 @@ node lib/js/src/Demo.bs.js <pattern>  # run the code
   * `diehard`
   * `engine`
   * `glider`
+  * [`gospers_glider_gun`](https://web.archive.org/web/20081221152518/http://www.argentum.freeserve.co.uk/lex_g.htm#gosperglidergun)
   * `growth`
   * `metamorphosis`
   * `mini_pressure_cooker`
