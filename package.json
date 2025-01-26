@@ -13,6 +13,6 @@
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^7.1.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "3.1.9"
   }
 }
